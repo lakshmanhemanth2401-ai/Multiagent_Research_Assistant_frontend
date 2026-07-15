@@ -1,4 +1,4 @@
-xport type ResearchStatus = 'idle' | 'planning' | 'researching' | 'writing' | 'completed' | 'failed'
+export type ResearchStatus = 'idle' | 'planning' | 'researching' | 'writing' | 'completed' | 'failed'
 
 export type AgentType = 'planner' | 'researcher' | 'writer' | 'reviewer'
 

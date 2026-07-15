@@ -1,4 +1,4 @@
-mport { create } from 'zustand'
+import { create } from 'zustand'
 
 export type ToastType = 'success' | 'error' | 'info' | 'warning'
 

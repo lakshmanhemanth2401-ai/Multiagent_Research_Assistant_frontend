@@ -1,4 +1,4 @@
-mport { useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 
 interface UseWebSocketOptions {
   onMessage?: (data: unknown) => void

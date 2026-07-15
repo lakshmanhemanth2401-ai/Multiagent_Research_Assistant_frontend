@@ -1,4 +1,4 @@
-xport type MessageRole = 'user' | 'assistant' | 'system'
+export type MessageRole = 'user' | 'assistant' | 'system'
 
 export interface Message {
   id: string

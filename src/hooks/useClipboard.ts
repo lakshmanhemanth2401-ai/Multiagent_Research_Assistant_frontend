@@ -1,4 +1,4 @@
-mport { useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 
 export function useClipboard(resetTimeout = 2000) {
   const [copied, setCopied] = useState(false)

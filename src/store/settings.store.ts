@@ -1,4 +1,4 @@
-mport { create } from 'zustand'
+import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 export type Theme = 'light' | 'dark' | 'system'

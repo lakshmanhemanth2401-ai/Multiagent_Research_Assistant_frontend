@@ -1,4 +1,4 @@
-mport { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useSettingsStore } from '@/store/settings.store'
 
 export function useTheme() {

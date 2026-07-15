@@ -1,4 +1,4 @@
-xport type ReportFormat = 'markdown' | 'pdf' | 'docx'
+export type ReportFormat = 'markdown' | 'pdf' | 'docx'
 export type ReportStatus = 'draft' | 'published'
 
 export interface Report {

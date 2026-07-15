@@ -1,4 +1,4 @@
-mport { create } from 'zustand'
+import { create } from 'zustand'
 import type { Conversation, Message } from '@/types/chat'
 
 interface ChatStore {

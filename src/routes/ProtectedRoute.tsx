@@ -1,12 +1,8 @@
-mport type { ReactNode } from 'react'
-import { Navigate } from 'react-router-dom'
-import { useAuthStore } from '@/store/auth.store'
+import { Outlet, Navigate } from 'react-router-dom'
 import { ROUTES } from '@/utils/constants'
 
-interface Props { children: ReactNode }
-
-export default function ProtectedRoute({ children }: Props) {
-  const isAuthenticated = useAuthStore((s) => s.isAuthenticated)
-  if (!isAuthenticated) return <Navigate to={ROUTES.LOGIN} replace />
-  return <>{children}</>
+// Auth check placeholder — authentication not yet implemented (Day 2)
+export default function ProtectedRoute() {
+  const isAuthenticated = true // TODO: replace with useAuthStore
+  return isAuthenticated ? <Outlet /> : <Navigate to={ROUTES.LOGIN} replace />
 }
