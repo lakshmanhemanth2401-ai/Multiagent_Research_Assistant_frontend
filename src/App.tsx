@@ -14,7 +14,8 @@ const ResearchPage  = lazy(() => import('@/features/research/pages/ResearchPage'
 const ReportsPage   = lazy(() => import('@/features/reports/pages/ReportsPage'))
 const FilesPage     = lazy(() => import('@/features/files/pages/FilesPage'))
 const SettingsPage  = lazy(() => import('@/features/settings/pages/SettingsPage'))
-const NotFoundPage  = lazy(() => import('@/pages/NotFoundPage'))
+const NotFoundPage     = lazy(() => import('@/pages/NotFoundPage'))
+const ComponentsPage   = lazy(() => import('@/pages/ComponentsPage'))
 
 function PageLoader() {
   return (
@@ -50,7 +51,8 @@ export default function App() {
           </Route>
         </Route>
 
-        <Route path='*' element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/components" element={<ComponentsPage />} />
       </Routes>
     </Suspense>
   )

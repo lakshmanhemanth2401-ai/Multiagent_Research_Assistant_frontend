@@ -1,7 +1,0 @@
-import{c as t,j as e,M as a,L as r,R as s}from"./index-D1Euryb6.js";/**
- * @license lucide-react v0.468.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */const o=t("House",[["path",{d:"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8",key:"5wwlr5"}],["path",{d:"M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",key:"1d0kgt"}]]);function n(){return e.jsxs("div",{className:"flex min-h-screen flex-col items-center justify-center bg-gray-50 dark:bg-gray-950 p-8 text-center",children:[e.jsx("div",{className:"flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-100 dark:bg-primary-900/30 text-primary-600 mb-6",children:e.jsx(a,{className:"h-8 w-8"})}),e.jsx("p",{className:"text-7xl font-extrabold text-primary-600 dark:text-primary-400",children:"404"}),e.jsx("h1",{className:"mt-4 text-2xl font-bold text-gray-900 dark:text-white",children:"Page not found"}),e.jsx("p",{className:"mt-2 max-w-sm text-sm text-gray-500 dark:text-gray-400",children:"The page you're looking for doesn't exist or has been moved."}),e.jsxs(r,{to:s.HOME,className:"mt-8 inline-flex items-center gap-2 rounded-xl bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 transition-colors",children:[e.jsx(o,{className:"h-4 w-4"}),"Back to home"]})]})}export{n as default};
-//# sourceMappingURL=NotFoundPage-BVFGT20d.js.map
