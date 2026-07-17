@@ -4,15 +4,19 @@ export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 export const WS_BASE_URL = import.meta.env.VITE_WS_BASE_URL
 
 export const ROUTES = {
-  HOME:      '/',
-  LOGIN:     '/login',
-  REGISTER:  '/register',
-  DASHBOARD: '/dashboard',
-  CHAT:      '/chat',
-  RESEARCH:  '/research',
-  REPORTS:   '/reports',
-  FILES:     '/files',
-  SETTINGS:  '/settings',
+  HOME:             '/',
+  LOGIN:            '/login',
+  REGISTER:         '/register',
+  FORGOT_PASSWORD:  '/forgot-password',
+  RESET_PASSWORD:   '/reset-password',
+  VERIFY_EMAIL:     '/verify-email',
+  SESSION_EXPIRED:  '/session-expired',
+  DASHBOARD:        '/dashboard',
+  CHAT:             '/chat',
+  RESEARCH:         '/research',
+  REPORTS:          '/reports',
+  FILES:            '/files',
+  SETTINGS:         '/settings',
 } as const
 
 export const QUERY_KEYS = {

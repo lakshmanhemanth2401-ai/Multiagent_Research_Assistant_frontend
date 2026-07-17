@@ -6,8 +6,12 @@ import ProtectedRoute from '@/routes/ProtectedRoute'
 import PublicRoute from '@/routes/PublicRoute'
 import { ROUTES } from '@/utils/constants'
 
-const LoginPage    = lazy(() => import('@/features/auth/pages/LoginPage'))
-const RegisterPage = lazy(() => import('@/features/auth/pages/RegisterPage'))
+const LoginPage           = lazy(() => import('@/features/auth/pages/LoginPage'))
+const RegisterPage        = lazy(() => import('@/features/auth/pages/RegisterPage'))
+const ForgotPasswordPage  = lazy(() => import('@/features/auth/pages/ForgotPasswordPage'))
+const ResetPasswordPage   = lazy(() => import('@/features/auth/pages/ResetPasswordPage'))
+const VerifyEmailPage     = lazy(() => import('@/features/auth/pages/VerifyEmailPage'))
+const SessionExpiredPage  = lazy(() => import('@/features/auth/pages/SessionExpiredPage'))
 const DashboardPage = lazy(() => import('@/features/dashboard/pages/DashboardPage'))
 const ChatPage      = lazy(() => import('@/features/chat/pages/ChatPage'))
 const ResearchPage  = lazy(() => import('@/features/research/pages/ResearchPage'))
@@ -31,15 +35,23 @@ export default function App() {
       <Routes>
         <Route path={ROUTES.HOME} element={<Navigate to={ROUTES.DASHBOARD} replace />} />
 
-        {/* Public routes */}
+        {/* Public-only routes (redirect authenticated users to dashboard) */}
         <Route element={<PublicRoute />}>
           <Route element={<AuthLayout />}>
-            <Route path={ROUTES.LOGIN}    element={<LoginPage />} />
-            <Route path={ROUTES.REGISTER} element={<RegisterPage />} />
+            <Route path={ROUTES.LOGIN}           element={<LoginPage />} />
+            <Route path={ROUTES.REGISTER}        element={<RegisterPage />} />
+            <Route path={ROUTES.FORGOT_PASSWORD} element={<ForgotPasswordPage />} />
+            <Route path={ROUTES.RESET_PASSWORD}  element={<ResetPasswordPage />} />
           </Route>
         </Route>
 
-        {/* Protected routes */}
+        {/* Auth utility pages (accessible regardless of auth state) */}
+        <Route element={<AuthLayout />}>
+          <Route path={ROUTES.VERIFY_EMAIL}    element={<VerifyEmailPage />} />
+          <Route path={ROUTES.SESSION_EXPIRED} element={<SessionExpiredPage />} />
+        </Route>
+
+        {/* Protected routes (redirect unauthenticated users to login) */}
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
             <Route path={ROUTES.DASHBOARD} element={<DashboardPage />} />
@@ -51,8 +63,8 @@ export default function App() {
           </Route>
         </Route>
 
-        <Route path="*" element={<NotFoundPage />} />
-        <Route path="/components" element={<ComponentsPage />} />
+        <Route path='/components' element={<ComponentsPage />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   )

@@ -1,8 +1,19 @@
-import { Outlet, Navigate } from 'react-router-dom'
+import { Outlet, Navigate, useLocation } from 'react-router-dom'
+import { useAuthStore } from '@/store/auth.store'
 import { ROUTES } from '@/utils/constants'
+import LoadingOverlay from '@/features/auth/components/LoadingOverlay'
 
-// Auth check placeholder — authentication not yet implemented (Day 2)
 export default function ProtectedRoute() {
-  const isAuthenticated = true // TODO: replace with useAuthStore
-  return isAuthenticated ? <Outlet /> : <Navigate to={ROUTES.LOGIN} replace />
+  const { isAuthenticated, isInitialized } = useAuthStore()
+  const location = useLocation()
+
+  if (!isInitialized) {
+    return <LoadingOverlay message="Restoring session…" />
+  }
+
+  return isAuthenticated ? (
+    <Outlet />
+  ) : (
+    <Navigate to={ROUTES.LOGIN} state={{ from: location }} replace />
+  )
 }

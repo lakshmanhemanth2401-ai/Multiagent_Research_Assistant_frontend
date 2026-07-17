@@ -1,8 +1,12 @@
 import { Outlet, Navigate } from 'react-router-dom'
+import { useAuthStore } from '@/store/auth.store'
 import { ROUTES } from '@/utils/constants'
 
-// Auth check placeholder — authentication not yet implemented (Day 2)
 export default function PublicRoute() {
-  const isAuthenticated = false // TODO: replace with useAuthStore
+  const { isAuthenticated, isInitialized } = useAuthStore()
+
+  // While hydrating from storage, let through (ProtectedRoute handles the guard)
+  if (!isInitialized) return <Outlet />
+
   return isAuthenticated ? <Navigate to={ROUTES.DASHBOARD} replace /> : <Outlet />
 }
