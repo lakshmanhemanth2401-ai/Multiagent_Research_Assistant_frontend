@@ -20,11 +20,17 @@ export const ROUTES = {
 } as const
 
 export const QUERY_KEYS = {
-  USER:              ['user'],
-  CONVERSATIONS:     ['conversations'],
-  RESEARCH_SESSIONS: ['research-sessions'],
-  REPORTS:           ['reports'],
-  FILES:             ['files'],
+  USER:                ['user'],
+  CONVERSATIONS:       ['conversations'],
+  RESEARCH_SESSIONS:   ['research-sessions'],
+  REPORTS:             ['reports'],
+  FILES:               ['files'],
+  DASHBOARD_STATS:     ['dashboard', 'stats'],
+  DASHBOARD_SESSIONS:  ['dashboard', 'sessions'],
+  DASHBOARD_REPORTS:   ['dashboard', 'reports'],
+  DASHBOARD_ACTIVITY:  ['dashboard', 'activity'],
+  DASHBOARD_PROGRESS:  ['dashboard', 'progress'],
+  DASHBOARD_NOTIFS:    ['dashboard', 'notifications'],
 } as const
 
 export const STORAGE_KEYS = {

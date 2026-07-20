@@ -1,0 +1,8 @@
+export { default as WelcomeSection }          from './WelcomeSection'
+export { default as StatsGrid }               from './StatsGrid'
+export { default as RecentSessionsWidget }    from './RecentSessionsWidget'
+export { default as RecentReportsWidget }     from './RecentReportsWidget'
+export { default as ActivityFeedWidget }      from './ActivityFeedWidget'
+export { default as ResearchProgressWidget }  from './ResearchProgressWidget'
+export { default as QuickActionsPanel }       from './QuickActionsPanel'
+export { default as NotificationsPanel }      from './NotificationsPanel'
