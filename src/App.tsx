@@ -14,7 +14,9 @@ const VerifyEmailPage     = lazy(() => import('@/features/auth/pages/VerifyEmail
 const SessionExpiredPage  = lazy(() => import('@/features/auth/pages/SessionExpiredPage'))
 const DashboardPage = lazy(() => import('@/features/dashboard/pages/DashboardPage'))
 const ChatPage      = lazy(() => import('@/features/chat/pages/ChatPage'))
-const ResearchPage  = lazy(() => import('@/features/research/pages/ResearchPage'))
+const ResearchPage          = lazy(() => import('@/features/research/pages/ResearchPage'))
+const NewResearchPage       = lazy(() => import('@/features/research/pages/NewResearchPage'))
+const ResearchWorkspacePage = lazy(() => import('@/features/research/pages/ResearchWorkspacePage'))
 const ReportsPage   = lazy(() => import('@/features/reports/pages/ReportsPage'))
 const FilesPage     = lazy(() => import('@/features/files/pages/FilesPage'))
 const SettingsPage  = lazy(() => import('@/features/settings/pages/SettingsPage'))
@@ -56,7 +58,9 @@ export default function App() {
           <Route element={<MainLayout />}>
             <Route path={ROUTES.DASHBOARD} element={<DashboardPage />} />
             <Route path={ROUTES.CHAT}      element={<ChatPage />} />
-            <Route path={ROUTES.RESEARCH}  element={<ResearchPage />} />
+            <Route path={ROUTES.RESEARCH}          element={<ResearchPage />} />
+            <Route path={ROUTES.RESEARCH_NEW}      element={<NewResearchPage />} />
+            <Route path={ROUTES.RESEARCH_WORKSPACE} element={<ResearchWorkspacePage />} />
             <Route path={ROUTES.REPORTS}   element={<ReportsPage />} />
             <Route path={ROUTES.FILES}     element={<FilesPage />} />
             <Route path={ROUTES.SETTINGS}  element={<SettingsPage />} />

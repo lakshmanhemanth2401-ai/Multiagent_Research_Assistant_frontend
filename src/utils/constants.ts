@@ -13,8 +13,10 @@ export const ROUTES = {
   SESSION_EXPIRED:  '/session-expired',
   DASHBOARD:        '/dashboard',
   CHAT:             '/chat',
-  RESEARCH:         '/research',
-  REPORTS:          '/reports',
+  RESEARCH:           '/research',
+  RESEARCH_NEW:       '/research/new',
+  RESEARCH_WORKSPACE: '/research/:sessionId',
+  REPORTS:            '/reports',
   FILES:            '/files',
   SETTINGS:         '/settings',
 } as const
